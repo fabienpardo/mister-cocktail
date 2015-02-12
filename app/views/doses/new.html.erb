@@ -1,2 +1,13 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<% i = Ingredient.all %>
+<div class="fullpage">
+  <div class="content text-center">
+    <h1 class="title_page">Tu dose <%= @cocktail.name %></h1>
+      <%= form_for(@cocktail, class: "form-group") do |f| %>
+      <%= f.label 'Ingrédient', class: 'control-label' %>
+      <% options = options_from_collection_for_select(i, 'id', 'name') %>
+      <%= f.select :all_val,  options %>
+      <%= f.submit class: 'btn btn-primary', style: 'margin: 50px' %>
+      <% end %>
+  </div>
+</div>
+
