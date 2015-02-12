@@ -3,7 +3,7 @@
     <h1 class="title_page">Tu dose <%= @cocktail.name %></h1>
       <%= form_for(@cocktail, class: "form-group") do |f| %>
       <%= f.label 'Ingrédient', class: 'control-label' %>
-      <%= f.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
+      <%= f.collection_select(:id, Ingredient.all, :id, :name) %>
       <%= f.submit class: 'btn btn-primary', style: 'margin: 50px' %>
       <% end %>
   </div>
