@@ -2,7 +2,7 @@
   <div class="content text-center">
     <h1 class="title_page">Les mixtures du guedin</h1>
     <ul class="content_page title_article list-unstyled">
-      <% @articles.each do |article| %>
+      <% @cocktails.each do |cocktail| %>
       <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
       <% end %>
     </ul>
