@@ -1,7 +1,7 @@
 <div class="fullpage">
   <div class="content text-center">
     <h1 class="title_page">Tu dose <%= @cocktail.name %></h1>
-      <%= form_for(@cocktail, class: "form-group") do |f| %>
+      <%= form_for(@doses, class: "form-group") do |f| %>
       <%= f.label 'Ingrédient', class: 'control-label' %>
       <%= f.collection_select(:ingredient, Ingredient.all, :id, :name) %>
       <%= f.label 'Description', class: 'control-label' %>
