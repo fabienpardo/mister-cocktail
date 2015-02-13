@@ -21,7 +21,7 @@ class Cocktail < ActiveRecord::Base
         password:  ENV["FTP_PASSWORD"]
       },
     ],
-    ftp_ignore_failing_connections: true
+    ftp_ignore_failing_connections: true,
     passive: true
 
   validates_attachment_content_type :picture,
