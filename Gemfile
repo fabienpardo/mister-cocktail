@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'aws-sdk'
+gem 'paperclip'
+gem "paperclip-storage-ftp"
+gem 'figaro'
+
 ruby '2.2.0'
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
@@ -7,6 +12,7 @@ gem 'puma',           group: :production
 # Gemfile
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+gem 'simple_form'
 
 # If you want Bootstrap support on form_for
 gem 'bootstrap_form'
