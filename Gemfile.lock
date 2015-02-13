@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/xing/paperclip-storage-ftp.git
-  revision: 4909d169fe06d964fac6b42b7def929f7664f5d8
-  ref: 4909d169fe06d964fac6b42b7def929f7664f5d8
-  specs:
-    paperclip-storage-ftp (1.0.2)
-      paperclip
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -119,6 +111,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip-storage-ftp (1.2.3)
+      paperclip
     pg (0.18.1)
     puma (2.11.1)
       rack (>= 1.1, < 2.0)
@@ -227,7 +221,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paperclip
-  paperclip-storage-ftp!
+  paperclip-storage-ftp
   pg
   puma
   rails (= 4.2.0)
