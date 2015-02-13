@@ -12,8 +12,9 @@ class Cocktail < ActiveRecord::Base
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" },
     storage: :ftp,
+    passive: true,
     path: "www/:attachment/:id/:style/:filename",
-    url: "https://www.lowclass.net/:attachment/:id/:style/:filename",
+    url: "http://www.lowclass.net/:attachment/:id/:style/:filename",
     ftp_servers: [
       {
         host:      ENV["FTP_HOST"],
@@ -21,8 +22,8 @@ class Cocktail < ActiveRecord::Base
         password:  ENV["FTP_PASSWORD"]
       },
     ],
-    ftp_ignore_failing_connections: true,
-    passive: true
+    ftp_connect_timeout: 5,
+    ftp_ignore_failing_connections: true
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
