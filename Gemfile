@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'aws-sdk'
 gem 'paperclip'
-gem "paperclip-storage-ftp"
+gem "paperclip-storage-ftp", :git => "git://github.com/xing/paperclip-storage-ftp.git", :ref => "4909d169fe06d964fac6b42b7def929f7664f5d8"
 gem 'figaro'
 
 ruby '2.2.0'
